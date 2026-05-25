@@ -1,6 +1,6 @@
-﻿using Coffeeshop.Data;
+using Coffeeshop.Data;
 using Coffeeshop.Models.Interfaces;
-namespace Coffeeshop.Models.Interfaces
+namespace Coffeeshop.Models.Service
 {
     public class ProductRepository: IProductRepository
     {

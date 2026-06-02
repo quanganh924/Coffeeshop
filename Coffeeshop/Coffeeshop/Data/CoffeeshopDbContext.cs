@@ -11,7 +11,9 @@ namespace Coffeeshop.Data
         }
 
         public DbSet<Product> Products { get; set; }
-
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderDetail> OrderDetail { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -30,7 +32,7 @@ namespace Coffeeshop.Data
                 {
                     Id = 2,
                     Name = "Vietnam",
-                    Price = 20,
+                    Price = 25,
                     Detail = "Vietnamese product",
                     ImageUrl = "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
                 },

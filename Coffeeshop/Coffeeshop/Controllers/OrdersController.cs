@@ -7,7 +7,8 @@ namespace Coffeeshop.Controllers
     public class OrdersController : Controller
     {
         private IOrderRepository orderRepository;
-        private IShoppingCartRepository shoppingCartRepository; public OrdersController(IOrderRepository oderRepository, IShoppingCartRepository shoppingCartRepossitory)
+        private IShoppingCartRepository shoppingCartRepository; 
+        public OrdersController(IOrderRepository oderRepository, IShoppingCartRepository shoppingCartRepossitory)
         {
             this.orderRepository = oderRepository;
             this.shoppingCartRepository = shoppingCartRepossitory;
@@ -22,7 +23,7 @@ namespace Coffeeshop.Controllers
         {
             orderRepository.PlaceOrder(order);
             shoppingCartRepository.ClearCart();
-
+            HttpContext.Session.SetInt32("CartItemsCount", 0);
             return RedirectToAction("CheckoutComplete");
         }
 

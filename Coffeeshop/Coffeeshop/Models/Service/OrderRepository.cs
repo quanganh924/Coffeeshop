@@ -1,10 +1,9 @@
 ﻿using Coffeeshop.Data;
-using Microsoft.EntityFrameworkCore;
 using Coffeeshop.Models.Interfaces;
 
 namespace Coffeeshop.Models.Service
 {
-    public interface OrderRepository: IOrderRepository
+    public class OrderRepository : IOrderRepository
     {
         private CoffeeshopDbContext dbContext;
         private IShoppingCartRepository shoppingCartRepository;

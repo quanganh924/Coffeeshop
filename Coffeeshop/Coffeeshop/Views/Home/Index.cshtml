@@ -2,22 +2,25 @@
 
 <section data-bs-version="5.1" class="header18 cid-tsEQyIZRcx mbr-fullscreen mbr-parallax-background"
          id="header18-1"
-         style="background-image: url('https://images.unsplash.com/photo-1580933073521-dc49ac0d4e6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80'); background-size: cover;">
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
+         style="background-image: url('https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); background-size: cover; background-position: center;">
+    <div class="mbr-overlay" style="opacity: 0.75; background-color: rgb(0, 0, 0);"></div>
     <div class="container mbr-white">
         <div class="row justify-content-center">
             <div class="card col-12 col-lg-10">
                 <div class="card-wrapper">
                     <div class="card-box align-center">
-                        <h1 class="card-title mbr-fonts-style align-center mb-4 display-1">
-                            <strong>The daily grind coffee house</strong>
+                        <h1 class="card-title mbr-fonts-style align-center mb-3 display-1" style="font-weight: 800; font-size: 4.5rem;">
+                            The daily grind coffee house
                         </h1>
-                        <p class="mbr-text mbr-fonts-style align-center display-7">
-                            Where every cup is a fresh bew of perfection
+                        <p class="mbr-text mbr-fonts-style align-center display-7" style="font-size: 1.1rem; font-weight: 300;">
+                            Where every cup is a fresh brew of perfection
                         </p>
-                        <div class="mbr-section-btn mt-3">
-                            <a asp-controller="Products" asp-action="Shop" class="btn btn-primary display-4">
-                                Shop Now
+                        <div class="mbr-section-btn mt-4">
+                            <a asp-controller="Products" asp-action="Shop" class="btn display-4" style="background-color: #d19f68; color: #ffffff; border: none; padding: 0.8rem 2.2rem; font-weight: 600; border-radius: 4px; transition: 0.3s;">
+                                Shop now
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16" style="margin-left: 8px; margin-bottom: 4px;">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -47,7 +50,7 @@
                             <img src="@item.ImageUrl" alt="@item.Name" title="">
                         </div>
                         <div class="item-content">
-                            <a asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id" target="_self">
+                            <a asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id" target="_self" style="text-decoration: none; color: inherit;">
                                 <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
                                     <strong>@item.Name</strong>
                                 </h6>
